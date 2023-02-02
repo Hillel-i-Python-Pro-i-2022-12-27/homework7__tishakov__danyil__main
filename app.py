@@ -8,6 +8,7 @@ from db.create_table import create_table
 
 app = Flask(__name__)
 
+
 @app.route("/phones/create")
 @use_args({"contact_name": fields.Str(required=True), "phone_value": fields.Int(required=True)}, location="query")
 def phones_create_user(args):
@@ -40,6 +41,7 @@ def phones_users__read(phone_id: int):
         ).fetchone()
 
     return f'{user["phone_id"]}: {user["contact_name"]} >>> {user["phone_value"]}'
+
 
 @app.route("/phones/update/<int:phone_id>")
 @use_args({"contact_name": fields.Str(), "phone_value": fields.Int()}, location="query")
