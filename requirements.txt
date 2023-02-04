@@ -1,0 +1,8 @@
+flask==2.2.2
+webargs==8.2.0
+black==23.1.0
+flake8==6.0.0
+autoflake==2.0.1
+pre-commit==3.0.3
+pyupgrade==3.3.1
+requests==2.28.2
